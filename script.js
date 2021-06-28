@@ -45,16 +45,19 @@ let pocasi = {
     },
  };
 
-    let mestopocasi = localStorage.getItem("mesto");
-    let ikonkaPocasi = localStorage.getItem("ikonka");
-    let popisIkonky = localStorage.getItem("popis");
-    let teplota = localStorage.getItem("teplota");
-    let vlhkost = localStorage.getItem("vlhkost");
-    let vitr = localStorage.getItem("vitr");
+     let mestopocasi = localStorage.getItem("mesto");
+     let ikonkaPocasi = localStorage.getItem("ikonka");
+     let popisIkonky = localStorage.getItem("popis");
+     let teplota = localStorage.getItem("teplota");
+     let vlhkost = localStorage.getItem("vlhkost");
+     let vitr = localStorage.getItem("vitr");
 
-    document.querySelector(".mesto").innerText =  mestopocasi;
-    document.querySelector(".teplo").innerText =  teplota + " °C";
-    document.querySelector(".ikonka").src = "https://openweathermap.org/img/wn/" + ikonkaPocasi + ".png";
-    document.querySelector(".podrobnosti").innerText =   popisIkonky;
-    document.querySelector(".vlhkost").innerText = "Vlhkost: " + vlhkost + " %";
-    document.querySelector(".vetrno").innerText = "Rychlost větru: " + vitr + " km/h";
+ if(mestopocasi != null || ikonkaPocasi != null || popisIkonky != null || teplota != null || vlhkost != null || vitr != null)
+ {
+     document.querySelector(".mesto").innerText =  mestopocasi;
+     document.querySelector(".teplo").innerText =  teplota + " °C";
+     document.querySelector(".ikonka").src = "https://openweathermap.org/img/wn/" + ikonkaPocasi + ".png";
+     document.querySelector(".podrobnosti").innerText =   popisIkonky;
+     document.querySelector(".vlhkost").innerText = "Vlhkost: " + vlhkost + " %";
+     document.querySelector(".vetrno").innerText = "Rychlost větru: " + vitr + " km/h";
+ }
